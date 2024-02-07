@@ -156,10 +156,12 @@ var groceries = [
   "mustard",
 ];
 
+
 console.log(groceries);
 
 
   var deleteDuplicates = function (list) {
+    
     var cleanList = [];
   
     for (var item of list) {
@@ -176,3 +178,64 @@ console.log(newGroceries)
 newGroceries.forEach(function (groceries, index) {
     console.log(`${index + 1}. ${groceries.toUpperCase()}`);
  });
+
+
+ var stuff = [
+  "cars",
+  "blankets",
+  "sunflowers",
+  "sky",
+  "yellow",
+  "code",
+  "perfume",
+  "coffee",
+  "books"
+];
+
+
+// Exercise #1
+
+// Skills practiced: array, forEach, if statement, % operator
+
+// Log out to the console each element of the stuff array with even-numbered indexes. Hint: Use the modulus (%) operator to return only even-numbered (i.e., divisible by 2 with no remainder) index positions: (index % 2 === 0).
+
+
+stuff.forEach(function (item, index) {
+ if ((index % 2 === 0)){
+  console.log(item)
+ }
+});
+
+// Create function that will remove an element from an array
+var removeItem = function (array, item) {
+  var index = array.indexOf(item);
+
+  if (index === -1) {
+    console.log(
+      `Sorry, no such item in this array.`
+    );
+  } else {
+    array.splice(index, 1);
+    console.log(`Removing ${item}`);
+  }
+};
+
+removeItem(stuff,  "blankets");
+console.log(stuff);
+removeItem(stuff,  "perfume");
+console.log(stuff);
+
+// Using 'filter'
+var filterStuff = stuff.filter(function (item) {
+  return item.includes("s");
+});
+console.log(filterStuff);
+
+// Using an empty array and a for loop
+var newArray = [];
+for (var item of stuff) {
+  if (item.includes("s")) {
+    newArray.push(item);
+  }
+}
+console.log(newArray);
