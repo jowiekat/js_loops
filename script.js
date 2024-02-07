@@ -1,4 +1,4 @@
-// // Create array called 'hobbies' of at least 6 elements
+// Create array called 'hobbies' of at least 6 elements
 // var hobbies = [
 //   "Reading",
 //   "Writing",
@@ -112,24 +112,67 @@ var programmingLanguages = [
   "C#"
 ];
 
-// Log out the array
-console.log(programmingLanguages);
+// // Log out the array
+// console.log(programmingLanguages);
 
-for (var language of programmingLanguages) {
-  console.log(`I want to learn ${language}!`);
-}
+// for (var language of programmingLanguages) {
+//   console.log(`I want to learn ${language}!`);
+// }
 
-// use forEach for array, make all items upper case
-// log out index starting at '1' with the uppercase element
-// i.e.: 1. JAVASCRIPT
-programmingLanguages.forEach(function (item, index) {
-  console.log(`${index + 1}. ${item.toUpperCase()}`);
-});
+// // use forEach for array, make all items upper case
+// // log out index starting at '1' with the uppercase element
+// // i.e.: 1. JAVASCRIPT
+// programmingLanguages.forEach(function (item, index) {
+//   console.log(`${index + 1}. ${item.toUpperCase()}`);
+// });
 
-// User .filter() to return a new array called updatedLangages that
-// returns languages without the letter "y"
-var updatedLanguages = programmingLanguages.filter(function (language) {
-  return language.includes("y");
-});
+// // User .filter() to return a new array called updatedLangages that
+// // returns languages without the letter "y"
+// var updatedLanguages = programmingLanguages.filter(function (language) {
+//   return language.includes("y");
+// });
 
-console.log(updatedLanguages);
+// console.log(updatedLanguages);
+
+// forEach function
+var groceries = [
+  "milk",
+  "coffee",
+  "oranges",
+  "yogourt",
+  "bread",
+  "juice",
+  "lettuce",
+  "flour",
+  "apples",
+  "milk",
+  "cat food",
+  "juice",
+  "ice cream",
+  "potatoes",
+  "bananas",
+  "coffee",
+  "olive oil",
+  "mustard",
+];
+
+console.log(groceries);
+
+
+  var deleteDuplicates = function (list) {
+    var cleanList = [];
+  
+    for (var item of list) {
+      if (!cleanList.includes(item)) {
+        cleanList.push(item);
+      }
+    } 
+    return cleanList; 
+};
+
+var newGroceries = deleteDuplicates(groceries)
+console.log(newGroceries)
+
+newGroceries.forEach(function (groceries, index) {
+    console.log(`${index + 1}. ${groceries.toUpperCase()}`);
+ });
